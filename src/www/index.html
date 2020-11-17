@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- There is no need to look into the code, as no clues are hidden here.
+Here is a nice unicorn for your trouble :)
+                                                 ,/
+                                                //
+                                              ,//
+                                  ___   /|   |//
+                              `__/\_ --(/|___/-/
+                           \|\_-\___ __-_`- /-/ \.
+                          |\_-___,-\_____--/_)' ) \
+                           \ -_ /     __ \( `( __`\|
+                           `\__|      |\)\ ) /(/|
+   ,._____.,            ',--//-|      \  |  '   /
+  /     __. \,          / /,---|       \       /
+ / /    _. \  \        `/`_/ _,'        |     |
+|  | ( (  \   |      ,/\'__/'/          |     |
+|  \  \`--, `_/_------______/           \(   )/
+| | \  \_. \,                            \___/\
+| |  \_   \  \                                 \
+\ \    \_ \   \   /                             \
+ \ \  \._  \__ \_|       |                       \
+  \ \___  \      \       |                        \
+   \__ \__ \  \_ |       \                         |
+   |  \_____ \  ____      |                        |
+   | \  \__ ---' .__\     |        |               |
+   \  \__ ---   /   )     |        \              /
+    \   \____/ / ()(      \          `---_       /|
+     \__________/(,--__    \_________.    |    ./ |
+       |     \ \  `---_\--,           \   \_,./   |
+       |      \  \_ ` \    /`---_______-\   \\    /
+        \      \.___,`|   /              \   \\   \
+         \     |  \_ \|   \              (   |:    |
+          \    \      \    |             /  / |    ;
+           \    \      \    \          ( `_'   \  |
+            \.   \      \.   \          `__/   |  |
+              \   \       \.  \                |  |
+               \   \        \  \               (  )
+                \   |        \  |              |  |
+                 |  \         \ \              I  `
+                 ( __;        ( _;            ('-_';
+                 |___\        \___:            \___:
+-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Riddle</title>
+
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="index.css">
+
+        <script src="index.js"></script>
+    </head>
+
+    <body>
+        <div class="logo"
+             data-logo>
+            <p class="logo-text"></p>
+        </div>
+
+        <div class='drawing-container'
+             data-drawing-container>
+            <canvas id="drawing"
+                    class="drawing">
+            </canvas>
+
+            <div class="blocks"
+                 data-blocks>
+            </div>
+
+            <div class="clue clue-top"
+                 data-clue-top>
+            </div>
+            <div class="clue clue-top"
+                 data-clue-top>
+            </div>
+            <div class="clue clue-top"
+                 data-clue-top>
+            </div>
+            <div class="clue clue-top"
+                 data-clue-top>
+            </div>
+            <div class="clue clue-top"
+                 data-clue-top>
+            </div>
+
+            <div class="clue clue-bottom"
+                 data-clue-bottom>
+            </div>
+            <div class="clue clue-bottom"
+                 data-clue-bottom>
+            </div>
+            <div class="clue clue-bottom"
+                 data-clue-bottom>
+            </div>
+            <div class="clue clue-bottom"
+                 data-clue-bottom>
+            </div>
+            <div class="clue clue-bottom"
+                 data-clue-bottom>
+            </div>
+        </div>
+
+        <div class="actions"
+             data-actions>
+            <button class="action-reset"
+                    onclick="reset()">
+                RESET
+            </button>
+
+            <button class="action-submit"
+                    onclick="submit()">
+                SUBMIT
+            </button>
+        </div>
+
+        <div class="clue-giver"
+             data-clue-giver>
+            <div class="bubble-clue"
+                 data-clue-giver-bubble>
+                <span>
+                    C'est foutu, on trouveras jamais !
+                </span>
+
+                <span class="bubble-arrow-inner"></span>
+            </div>
+
+            <div class="clue-giver-picture"
+                 onclick="onClueClick()">
+                <img alt=""
+                     height="100"
+                     src="images/clue.png" />
+            </div>
+        </div>
+
+        <div class="taunt-giver"
+             data-taunt-giver>
+            <div class="bubble-taunt"
+                 data-taunt-giver-bubble>
+                <span>
+                    Essayes chaussette pour voir ?
+                </span>
+
+                <span class="bubble-arrow-inner"></span>
+            </div>
+
+            <img alt=""
+                 height="100"
+                 src="images/taunt.png" />
+        </div>
+
+        <div class="success"
+             data-success-page>
+            <div class="success-corner-left-top">
+                <img alt=""
+                     width="720"
+                     height="200"
+                     src="images/success-bg-1.png" />
+            </div>
+
+            <div class="success-corner-right-top">
+                <img alt=""
+                     width="720"
+                     height="200"
+                     src="images/success-bg-3.png" />
+            </div>
+
+            <div class='success-middle'>
+                <img alt=""
+                     height="150"
+                     src="images/oculus-quest-2.png" />
+
+                <p>
+                    GG ! Appelles moi pour la suite ;)
+                </p>
+            </div>
+
+            <div class="success-corner-left-bottom">
+                <img alt=""
+                     width="720"
+                     height="200"
+                     src="images/success-bg-2.png" />
+            </div>
+
+            <div class="success-corner-right-bottom">
+                <img alt=""
+                     width="720"
+                     height="200"
+                     src="images/success-bg-4.png" />
+            </div>
+        </div>
+    </body>
+</html>
